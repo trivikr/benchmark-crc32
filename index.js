@@ -14,7 +14,7 @@ const testBuffer = generateBuffer(1024);
 
 console.log(`CRC32 values returned:`);
 console.log(`* crc: ${crc.crc32(testBuffer)}`);
-console.log(`* crc-32: ${crc32.buf(testBuffer)}`);
+console.log(`* crc-32: ${crc32.buf(testBuffer) >>> 0}`);
 console.log(`* buffer-crc32: ${bufferCrc32.unsigned(Buffer.from(testBuffer))}`);
 
 console.log(`\nBenchmark:`);
@@ -23,7 +23,7 @@ suite
     crc.crc32(testBuffer);
   })
   .add("crc-32", () => {
-    crc32.buf(testBuffer);
+    crc32.buf(testBuffer) >>> 0;
   })
   .add("buffer-crc32", () => {
     bufferCrc32.unsigned(Buffer.from(testBuffer));

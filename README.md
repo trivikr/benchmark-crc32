@@ -11,13 +11,13 @@ Example run:
 
 ```console
 CRC32 values returned:
-* crc: 142849690
-* crc-32: 142849690
-* buffer-crc32: 142849690
+* crc: 3661861187
+* crc-32: 3661861187
+* buffer-crc32: 3661861187
 
 Benchmark:
-crc x 397,547 ops/sec ±0.36% (94 runs sampled)
-crc-32 x 460,140 ops/sec ±0.40% (91 runs sampled)
-buffer-crc32 x 343,503 ops/sec ±1.11% (93 runs sampled)
+crc x 423,289 ops/sec ±1.04% (91 runs sampled)
+crc-32 x 440,881 ops/sec ±0.73% (95 runs sampled)
+buffer-crc32 x 338,095 ops/sec ±0.82% (93 runs sampled)
 Fastest is crc-32
 ```
