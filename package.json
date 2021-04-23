@@ -16,7 +16,7 @@
     "webpack-dev-server": "^3.11.2"
   },
   "scripts": {
-    "benchmark": "node index.js"
+    "benchmark": "node src/index.js"
   },
   "repository": {
     "type": "git",
