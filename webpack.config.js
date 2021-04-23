@@ -17,4 +17,5 @@ export default {
     hot: true,
   },
   plugins: [new webpack.ProvidePlugin({ Buffer: ["buffer", "Buffer"] })],
+  amd: false,
 };
