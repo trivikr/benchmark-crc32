@@ -1,19 +1,33 @@
 import benchmark from "benchmark";
+import bufferCrc32 from "buffer-crc32";
+import crc from "crc";
+
+const generateBuffer = (size) => {
+  const buf = Buffer.alloc(size);
+  for (let i = 0; i < size; i++) buf[i] = parseInt(Math.random() * 256);
+  return buf;
+};
 
 const suite = new benchmark.Suite();
+const testBuffer = generateBuffer(1024);
 
+console.log(`CRC32 values returned:`);
+console.log(`* buffer-crc32: ${bufferCrc32.unsigned(Buffer.from(testBuffer))}`);
+console.log(`* crc: ${crc.crc32(testBuffer)}`);
+
+console.log(`\nBenchmark:`);
 suite
-  .add("RegExp#test", function () {
-    /o/.test("Hello World!");
+  .add("buffer-crc32", () => {
+    bufferCrc32.unsigned(Buffer.from(testBuffer));
   })
-  .add("String#indexOf", function () {
-    "Hello World!".indexOf("o") > -1;
+  .add("crc", () => {
+    crc.crc32(testBuffer);
   })
-  .on("cycle", function (event) {
+  .on("cycle", (event) => {
     console.log(String(event.target));
   })
-  .on("complete", function () {
-    console.log("Fastest is " + this.filter("fastest").map("name"));
+  .on("complete", () => {
+    console.log("Fastest is " + suite.filter("fastest").map("name"));
   })
   // run async
-  .run({ async: true });
+  .run({ async: false });

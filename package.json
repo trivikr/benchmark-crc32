@@ -5,7 +5,9 @@
   "main": "index.js",
   "type": "module",
   "dependencies": {
-    "benchmark": "^2.1.4"
+    "benchmark": "^2.1.4",
+    "buffer-crc32": "^0.2.13",
+    "crc": "^3.8.0"
   },
   "devDependencies": {},
   "scripts": {
