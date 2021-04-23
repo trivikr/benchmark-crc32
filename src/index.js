@@ -20,20 +20,24 @@ const suite = new benchmark.Suite();
 const testBuffer = generateBuffer(1024);
 
 console.log(`CRC32 values returned:`);
-console.log(`* crc: ${crc.crc32(testBuffer)}`);
-console.log(`* crc-32: ${crc32.buf(testBuffer) >>> 0}`);
-console.log(`* buffer-crc32: ${bufferCrc32.unsigned(Buffer.from(testBuffer))}`);
+console.log(`* crc: ${crc.crc32(testBuffer).toString(16)}`);
+console.log(`* crc-32: ${(crc32.buf(testBuffer) >>> 0).toString(16)}`);
+console.log(
+  `* buffer-crc32: ${bufferCrc32
+    .unsigned(Buffer.from(testBuffer))
+    .toString(16)}`
+);
 
 console.log(`\nBenchmark:`);
 suite
   .add("crc", () => {
-    crc.crc32(testBuffer);
+    crc.crc32(testBuffer).toString(16);
   })
   .add("crc-32", () => {
-    crc32.buf(testBuffer) >>> 0;
+    (crc32.buf(testBuffer) >>> 0).toString(16);
   })
   .add("buffer-crc32", () => {
-    bufferCrc32.unsigned(Buffer.from(testBuffer));
+    bufferCrc32.unsigned(Buffer.from(testBuffer)).toString(16);
   })
   .on("cycle", (event) => {
     console.log(String(event.target));

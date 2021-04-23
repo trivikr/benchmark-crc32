@@ -16,48 +16,48 @@ three most downloaded as per [npm trends][4].
 
 ### Example run
 
-#### Node.js
+#### Node.js v16.0.0
 
 ```console
 CRC32 values returned:
-* crc: 3661861187
-* crc-32: 3661861187
-* buffer-crc32: 3661861187
+* crc: 42b8e4eb
+* crc-32: 42b8e4eb
+* buffer-crc32: 42b8e4eb
 
 Benchmark:
-crc x 423,289 ops/sec ±1.04% (91 runs sampled)
-crc-32 x 440,881 ops/sec ±0.73% (95 runs sampled)
-buffer-crc32 x 338,095 ops/sec ±0.82% (93 runs sampled)
+crc x 359,715 ops/sec ±1.21% (92 runs sampled)
+crc-32 x 431,613 ops/sec ±0.78% (94 runs sampled)
+buffer-crc32 x 294,471 ops/sec ±1.08% (90 runs sampled)
 Fastest is crc-32
 ```
 
-#### Brave browser (Chromium)
+#### Brave browser v1.23.71 (Chromium-based)
 
 ```console
 CRC32 values returned:
-* crc: 3296144236
-* crc-32: 3296144236
-* buffer-crc32: 3296144236
+* crc: 6d790bbc
+* crc-32: 6d790bbc
+* buffer-crc32: 6d790bbc
 
 Benchmark:
-crc x 473,526 ops/sec ±0.26% (67 runs sampled)
-crc-32 x 449,748 ops/sec ±0.36% (66 runs sampled)
-buffer-crc32 x 14,438 ops/sec ±1.38% (65 runs sampled)
-Fastest is crc
+crc x 391,421 ops/sec ±1.50% (64 runs sampled)
+crc-32 x 392,587 ops/sec ±0.82% (66 runs sampled)
+buffer-crc32 x 14,641 ops/sec ±0.50% (66 runs sampled)
+Fastest is crc-32
 ```
 
-#### Firefox
+#### Firefox browser v78.9.0esr
 
 ```console
 CRC32 values returned:
-* crc: 1539917978
-* crc-32: 1539917978
-* buffer-crc32: 1539917978
+* crc: 57e49b3d
+* crc-32: 57e49b3d
+* buffer-crc32: 57e49b3d
 
 Benchmark: index.js:33:9
-crc x 184,353 ops/sec ±0.26% (63 runs sampled)
-crc-32 x 380,388 ops/sec ±0.75% (65 runs sampled)
-buffer-crc32 x 80,536 ops/sec ±3.58% (53 runs sampled)
+crc x 181,631 ops/sec ±0.38% (63 runs sampled)
+crc-32 x 374,614 ops/sec ±0.73% (65 runs sampled)
+buffer-crc32 x 77,648 ops/sec ±3.36% (58 runs sampled)
 Fastest is crc-32
 ```
 
