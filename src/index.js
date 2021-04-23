@@ -3,6 +3,13 @@ import bufferCrc32 from "buffer-crc32";
 import crc from "crc";
 import crc32 from "crc-32";
 
+if (typeof window !== "undefined") {
+  // Fix to run benchmark in browser
+  // Ref: https://github.com/bestiejs/benchmark.js/issues/208#issue-342996334
+  window.define = {};
+  window.define.amd = {};
+}
+
 const generateBuffer = (size) => {
   const buf = Buffer.alloc(size);
   for (let i = 0; i < size; i++) buf[i] = parseInt(Math.random() * 256);
