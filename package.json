@@ -6,6 +6,7 @@
   "type": "module",
   "dependencies": {
     "benchmark": "^2.1.4",
+    "buffer": "^6.0.3",
     "buffer-crc32": "^0.2.13",
     "crc": "^3.8.0",
     "crc-32": "^1.2.0"

@@ -1,5 +1,6 @@
 import { dirname, join } from "path";
 import { fileURLToPath } from "url";
+import webpack from "webpack";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
@@ -15,4 +16,5 @@ export default {
     open: true,
     hot: true,
   },
+  plugins: [new webpack.ProvidePlugin({ Buffer: ["buffer", "Buffer"] })],
 };
