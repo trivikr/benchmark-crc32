@@ -1,5 +1,25 @@
 {
+  "name": "benchmark-crc32",
+  "description": "Benchmark various crc32 implementations in JavaScript",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
   "dependencies": {
     "benchmark": "^2.1.4"
-  }
+  },
+  "devDependencies": {},
+  "scripts": {
+    "benchmark": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trivikr/benchmark-crc32.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/trivikr/benchmark-crc32/issues"
+  },
+  "homepage": "https://github.com/trivikr/benchmark-crc32#readme"
 }
