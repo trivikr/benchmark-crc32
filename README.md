@@ -6,6 +6,8 @@ Steps to run benchmark:
 
 - `yarn` or `npm install` or `pnpm install` to install dependencies.
 - `yarn benchmark` or `npm run benchmark` or `pnpm benchmark` to run benchmark.
+- `yarn benchmark:web` or `npm run benchmark:web` or `pnpm benchmark:web` to run
+  benchmark on the browser.
 
 ## CRC32
 
