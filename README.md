@@ -22,14 +22,16 @@ three most downloaded as per [npm trends][4].
 
 ```console
 CRC32 values returned for random buffer:
-* crc: 1022ff1e
-* crc-32: 1022ff1e
-* buffer-crc32: 1022ff1e
+* crc: bbe00242
+* crc-32: bbe00242
+* buffer-crc32: bbe00242
+* @aws-crypto/crc32: bbe00242
 
 Benchmark:
-crc x 439,274 ops/sec ±0.42% (95 runs sampled)
-crc-32 x 442,082 ops/sec ±0.41% (95 runs sampled)
-buffer-crc32 x 303,327 ops/sec ±0.74% (90 runs sampled)
+crc x 418,858 ops/sec ±0.33% (91 runs sampled)
+crc-32 x 426,337 ops/sec ±0.25% (96 runs sampled)
+buffer-crc32 x 318,404 ops/sec ±0.33% (94 runs sampled)
+@aws-crypto/crc32 x 74,763 ops/sec ±0.90% (95 runs sampled)
 Fastest is crc-32
 ```
 
@@ -37,14 +39,16 @@ Fastest is crc-32
 
 ```console
 CRC32 values returned for random buffer:
-* crc: 284b8795
-* crc-32: 284b8795
-* buffer-crc32: 284b8795
+* crc: 5d92cd44
+* crc-32: 5d92cd44
+* buffer-crc32: 5d92cd44
+* @aws-crypto/crc32: 5d92cd44
 
 Benchmark:
-crc x 448,449 ops/sec ±0.26% (66 runs sampled)
-crc-32 x 438,713 ops/sec ±0.43% (66 runs sampled)
-buffer-crc32 x 14,664 ops/sec ±0.70% (65 runs sampled)
+crc x 376,443 ops/sec ±1.66% (62 runs sampled)
+crc-32 x 370,629 ops/sec ±1.86% (61 runs sampled)
+buffer-crc32 x 14,292 ops/sec ±1.34% (63 runs sampled)
+@aws-crypto/crc32 x 56,918 ops/sec ±1.29% (62 runs sampled)
 Fastest is crc
 ```
 
@@ -52,14 +56,16 @@ Fastest is crc
 
 ```console
 CRC32 values returned for random buffer:
-* crc: a07568b3
-* crc-32: a07568b3
-* buffer-crc32: a07568b3
+* crc: b82b29d7
+* crc-32: b82b29d7
+* buffer-crc32: b82b29d7
+* @aws-crypto/crc32: b82b29d7
 
 Benchmark: crc32.js:36:9
 crc x 188,843 ops/sec ±0.48% (63 runs sampled)
 crc-32 x 370,060 ops/sec ±0.85% (67 runs sampled)
 buffer-crc32 x 80,874 ops/sec ±2.67% (64 runs sampled)
+@aws-crypto/crc32 x 15,069 ops/sec ±1.78% (64 runs sampled)
 Fastest is crc-32
 ```
 
