@@ -31,7 +31,6 @@ console.log(
     .toString(16)}`
 );
 
-const awsCryptoCrc32Obj = new awsCryptoCrc32();
 console.log(`\nBenchmark:`);
 suite
   .add("crc", () => {
@@ -44,7 +43,7 @@ suite
     bufferCrc32.unsigned(testBuffer).toString(16);
   })
   .add("@aws-crypto/crc32", () => {
-    awsCryptoCrc32Obj.update(testBuffer).digest(16).toString(16);
+    new awsCryptoCrc32().update(testBuffer).digest(16).toString(16);
   })
   .on("cycle", (event) => {
     console.log(String(event.target));
