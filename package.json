@@ -23,7 +23,7 @@
     "benchmark:crc32": "node src/crc32.js",
     "benchmark:crc32:web": "webpack serve --entry ./src/crc32.js",
     "benchmark:crc32c": "node src/crc32c.js",
-    "benchmark:crc32c:web": "webpack serve --entry ./src/crc32c.js"
+    "benchmark:crc32c:web": "webpack serve --entry ./src/crc32c.browser.js"
   },
   "repository": {
     "type": "git",

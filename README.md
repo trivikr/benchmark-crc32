@@ -63,6 +63,57 @@ buffer-crc32 x 80,874 ops/sec ±2.67% (64 runs sampled)
 Fastest is crc-32
 ```
 
+## CRC32C
+
+We compare [fast-crc32c][5], [sse4_crc32][6] and [junderw-crc32c][7] as those are the
+three most downloaded as per [npm trends][8].
+
+- `yarn benchmark:crc32` or `npm run benchmark:crc32` or `pnpm benchmark:crc32`
+  to run benchmark for crc32.
+- `yarn benchmark:crc32:web` or `npm run benchmark:crc32:web` or
+  `pnpm benchmark:crc32:web` to run benchmark for crc32 on the browser.
+
+### Example run
+
+#### Node.js v16.4.0
+
+```console
+CRC32c values returned for random buffer:
+* fast-crc32c: a51b7a5f
+* sse4_crc32 (sw): a51b7a5f
+* sse4_crc32 (hw): a51b7a5f
+* junderw-crc32c: a51b7a5f
+
+Benchmark:
+fast-crc32c x 1,572,668 ops/sec ±0.46% (93 runs sampled)
+sse4_crc32 (sw) x 1,550,894 ops/sec ±0.36% (91 runs sampled)
+sse4_crc32 (hw) x 1,521,460 ops/sec ±1.16% (93 runs sampled)
+junderw-crc32c x 419,697 ops/sec ±0.37% (87 runs sampled)
+Fastest is fast-crc32c
+```
+
+#### Brave browser v1.26.67 (Chromium: 91.0.4472.114)
+
+```console
+CRC32c values returned for random buffer:
+* junderw-crc32c: 6b5b739d
+
+Benchmark:
+junderw-crc32c x 391,254 ops/sec ±0.83% (66 runs sampled)
+Fastest is junderw-crc32c
+```
+
+#### Firefox browser v78.10.1esr
+
+```console
+CRC32c values returned for random buffer:
+* junderw-crc32c: 69c0767e
+
+Benchmark:
+junderw-crc32c x 371,923 ops/sec ±0.48% (67 runs sampled)
+Fastest is junderw-crc32c
+```
+
 [1]: https://www.npmjs.com/package/crc
 [2]: https://www.npmjs.com/package/crc-32
 [3]: https://www.npmjs.com/package/buffer-crc32
