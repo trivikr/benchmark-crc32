@@ -1,4 +1,4 @@
-import { dirname, join } from "path";
+import { dirname, join, resolve } from "path";
 import { fileURLToPath } from "url";
 import webpack from "webpack";
 
@@ -6,8 +6,9 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 
 export default {
   mode: "development",
-  entry: {
-    main: "./src/index.js",
+  output: {
+    filename: "main.js",
+    path: resolve(__dirname, "dist"),
   },
   devServer: {
     contentBase: join(__dirname, "public"),
