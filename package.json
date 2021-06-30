@@ -5,6 +5,7 @@
   "main": "index.js",
   "type": "module",
   "dependencies": {
+    "@aws-crypto/crc32": "^1.0.0",
     "benchmark": "^2.1.4",
     "buffer": "^6.0.3",
     "buffer-crc32": "^0.2.13",
