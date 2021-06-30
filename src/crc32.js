@@ -19,7 +19,7 @@ const generateBuffer = (size) => {
 const suite = new benchmark.Suite();
 const testBuffer = generateBuffer(1024);
 
-console.log(`CRC32 values returned:`);
+console.log(`CRC32 values returned for random buffer:`);
 console.log(`* crc: ${crc.crc32(testBuffer).toString(16)}`);
 console.log(`* crc-32: ${(crc32.buf(testBuffer) >>> 0).toString(16)}`);
 console.log(`* buffer-crc32: ${bufferCrc32.unsigned(testBuffer).toString(16)}`);

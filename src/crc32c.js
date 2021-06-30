@@ -12,7 +12,7 @@ const generateBuffer = (size) => {
 const suite = new benchmark.Suite();
 const testBuffer = generateBuffer(1024);
 
-console.log(`CRC32c values returned:`);
+console.log(`CRC32c values returned for random buffer:`);
 console.log(`* fast-crc32c: ${fastCrc32c.calculate(testBuffer).toString(16)}`);
 console.log(
   `* sse4_crc32 (sw): ${sse4Crc32.table_crc(testBuffer).toString(16)}`
