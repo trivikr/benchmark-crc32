@@ -65,13 +65,12 @@ Fastest is crc-32
 
 ## CRC32C
 
-We compare [fast-crc32c][5], [sse4_crc32][6] and [junderw-crc32c][7] as those are the
-three most downloaded as per [npm trends][8].
+We compare [fast-crc32c][5], [sse4_crc32][6] and [junderw-crc32c][7].
 
-- `yarn benchmark:crc32` or `npm run benchmark:crc32` or `pnpm benchmark:crc32`
-  to run benchmark for crc32.
-- `yarn benchmark:crc32:web` or `npm run benchmark:crc32:web` or
-  `pnpm benchmark:crc32:web` to run benchmark for crc32 on the browser.
+- `yarn benchmark:crc32c` or `npm run benchmark:crc32c` or `pnpm benchmark:crc32c`
+  to run benchmark for crc32c.
+- `yarn benchmark:crc32c:web` or `npm run benchmark:crc32c:web` or
+  `pnpm benchmark:crc32c:web` to run benchmark for crc32c on the browser.
 
 ### Example run
 
@@ -118,3 +117,6 @@ Fastest is junderw-crc32c
 [2]: https://www.npmjs.com/package/crc-32
 [3]: https://www.npmjs.com/package/buffer-crc32
 [4]: https://www.npmtrends.com/crc32-vs-crc-32-vs-buffer-crc32-vs-crc-vs-sse4_crc32
+[5]: https://www.npmjs.com/package/fast-crc32c
+[6]: https://www.npmjs.com/package/sse4_crc32
+[7]: https://www.npmjs.com/package/junderw-crc32c
