@@ -20,8 +20,10 @@
     "webpack-dev-server": "^3.11.2"
   },
   "scripts": {
-    "benchmark": "node src/crc32.js",
-    "benchmark:web": "webpack serve --entry ./src/crc32.js"
+    "benchmark:crc32": "node src/crc32.js",
+    "benchmark:crc32:web": "webpack serve --entry ./src/crc32.js",
+    "benchmark:crc32c": "node src/crc32c.js",
+    "benchmark:crc32c:web": "webpack serve --entry ./src/crc32c.js"
   },
   "repository": {
     "type": "git",
