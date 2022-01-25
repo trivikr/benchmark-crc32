@@ -1,5 +1,6 @@
 import benchmark from "benchmark";
 import junderwCrc32c from "junderw-crc32c";
+import crc32c from "crc-32/crc32c.js";
 
 const generateBuffer = (size) => {
   const buf = Buffer.alloc(size);
@@ -12,11 +13,17 @@ const testBuffer = generateBuffer(1024);
 
 console.log(`CRC32c values returned for random buffer:`);
 console.log(
+  `* crc32c: ${(crc32c.buf(testBuffer) >>> 0).toString(16)}`
+);
+console.log(
   `* junderw-crc32c: ${(junderwCrc32c.buf(testBuffer) >>> 0).toString(16)}`
 );
 
 console.log(`\nBenchmark:`);
 suite
+  .add("crc32c", () => {
+    (crc32c.buf(testBuffer) >>> 0).toString(16);
+  })
   .add("junderw-crc32c", () => {
     (junderwCrc32c.buf(testBuffer) >>> 0).toString(16);
   })
