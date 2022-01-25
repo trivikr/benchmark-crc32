@@ -1,5 +1,6 @@
 import benchmark from "benchmark";
 import junderwCrc32c from "junderw-crc32c";
+import crc32c from "crc-32/crc32c.js";
 import fastCrc32c from "fast-crc32c";
 import sse4Crc32 from "sse4_crc32";
 
@@ -21,6 +22,9 @@ console.log(
   `* sse4_crc32 (hw): ${sse4Crc32.sse42_crc(testBuffer).toString(16)}`
 );
 console.log(
+  `* crc32c: ${(crc32c.buf(testBuffer) >>> 0).toString(16)}`
+);
+console.log(
   `* junderw-crc32c: ${(junderwCrc32c.buf(testBuffer) >>> 0).toString(16)}`
 );
 
@@ -34,6 +38,9 @@ suite
   })
   .add("sse4_crc32 (hw)", () => {
     sse4Crc32.sse42_crc(testBuffer).toString(16);
+  })
+  .add("crc32c", () => {
+    (crc32c.buf(testBuffer) >>> 0).toString(16);
   })
   .add("junderw-crc32c", () => {
     (junderwCrc32c.buf(testBuffer) >>> 0).toString(16);
